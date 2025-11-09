@@ -7796,6 +7796,10 @@ addcmd('clearerror',{'clearerrors'},function(args, speaker)
 	GuiService:ClearError()
 end)
 
+addcmd("savegame", {"saveplace"}, function(args, speaker)
+        notify("Maintenance", "This command is on maintenance; only selected people can use it.")
+end)
+
 addcmd('clientantikick',{'antikick'},function(args, speaker)
 	if not hookmetamethod then 
 	    return notify('Incompatible Exploit','Your exploit does not support this command (missing hookmetamethod)')
